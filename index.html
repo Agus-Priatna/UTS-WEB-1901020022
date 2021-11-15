@@ -1,0 +1,145 @@
+<html>
+    <head>
+        <title>ZEUS COM</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <script src="https://unpkg.com/vue@next"></script>
+    </head>
+
+    <body>
+      <div id="app">
+
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid col-md-11">
+            <a class="navbar-brand" href="#">
+                <img src="./image/trident.png" alt="" width="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ms-auto fs-6">
+                  <li class="nav-item ms-4">
+                      <a class="nav-link" href="#">HOME</a>
+                  </li>
+                  <li class="nav-item ms-4">
+                      <a class="nav-link" href="#shop">SHOP</a>
+                  </li>
+                  <li class="nav-item ms-4">
+                      <a class="nav-link" href="#location">LOCATION</a>
+                  </li>
+                  <!-- <div class="cart"><i class="fas fa-shopping-cart"></i>{{ cart }}</div> -->
+                  <button type="button" class="btn btn-primary position-relative bg-dark">
+                    <i class="fas fa-shopping-cart"></i> {{ cart }}
+                    <!-- <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                      99+
+                      <span class="visually-hidden">unread messages</span>
+                    </span> -->
+                  </button>
+              </ul>
+           </div>
+          </div>
+        </nav>
+        <!-- navbar -->
+
+      <!-- banner   -->
+      <div class="banner w-100 vh-100 d-flex justify-content-center align-items-center">
+          <div class="container">
+              <h1 class="display-1 fw-bold">ZEUS COM</h1>
+              <h2 class="display-4">BUILD YOUR OWN PC!</h2>
+              <a href="#">
+                <button class="btn btn-success btn-lg" type="button">Let's Build</button>
+              </a>
+          </div>
+      </div>
+      <!-- banner -->
+
+      <div class="container-fluid bg-color py-4" id="shop">
+          <p class="h4 fs-1 text-center fw-bold">HOT ITEM</p>
+
+          <div class="row row-cols-1 row-cols-md-3 g-4" id="app">
+            <div class="col">
+              <div class="card h-100">
+                <img src="./image/rtx-3060TI.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">MSI Ventus RTX 3060 TI 8GB GDDR6</h5>
+                  <p class="card-text">MSI GeForce RTX 3060 Ti 8GB GDDR6 - Ventus 2X OC V1-LHR</p>
+                  <h4>Rp. 14.899.000</h4>
+                  <button class="btn btn-warning btn-lg d-grid gap-2 col-6 mx-auto" type="button" @click="addToCart"><i class="fas fa-cart-plus"></i></button>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card h-100">
+                <img src="./image/rx-6600-xt.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">ASRock Rx 6600 XT 8GB</h5>
+                  <p class="card-text">ASRock Radeon RX 6600 XT 8GB DDR6 - Challenger D 8G OC</p>
+                  <h4>Rp. 11.899.000</h4>
+                  <button class="btn btn-warning btn-lg d-grid gap-2 col-6 mx-auto" type="button" @click="addToCart"><i class="fas fa-cart-plus"></i></button>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card h-100">
+                <img src="./image/ryzen5.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Ryzen 5 5600X</h5>
+                  <p class="card-text">AMD Ryzen 5 5600X 3.7Ghz Up To 4.6Ghz Cache 32MB 65W AM4 [Box] - 6 Core - 100-100000065BOX - With AMD Wraith Stealth Cooler (Garansi AMD Global/AMD International 3 Years Replacement)</p>
+                  <h4>Rp. 4.505.000</h4>
+                  <button class="btn btn-warning btn-lg d-grid gap-2 col-6 mx-auto" type="button" @click="addToCart"><i class="fas fa-cart-plus"></i></button>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <!-- footer -->
+      <div class="container-fluid bg-light" id="location">
+        <div class="col pt-2 text-center">
+          <h1>TOKO KAMI</h1>
+          <ul class="list-unstyled text-color1 footer-link-list fs-5">
+            <li class="py-1">
+              <i class="fas fa-map-marked-alt"></i>
+              <p class="text-decoration-none text-color1">DENPASAR</p>
+            </li>
+              <li class="py-1">
+                  <i class="fab fa-whatsapp-square fs-3"></i>
+                  <p class="text-decoration-none text-color1">082146553928</p>
+              </li>
+              <li class="py-1">
+                  <i class="fas fa-envelope"></i>
+                  <p class="text-decoration-none text-color1">imadeaguspriatnaputra@gmail.com</p>
+              </li>
+              <li class="py-1">
+                  <i class="fab fa-instagram"></i> <i class="fab fa-facebook-square"></i> <i class="fab fa-twitter-square"></i>
+                  <p class="text-decoration-none text-color1">ZEUSCOM.STORE</p>
+              </li>
+          </ul>
+          <div class="container-fluid border-top">&copy; ZEUS COM. All rights reserved.</div>
+        </div>
+      </div>
+      <!-- footer -->
+      </div>
+
+        <script src="main.js"></script>
+
+        <script>
+          const mountedApp = app.mount('#app')
+        </script>
+
+    </body>
+</html>

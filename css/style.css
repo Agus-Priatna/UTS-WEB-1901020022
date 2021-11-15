@@ -1,0 +1,12 @@
+.banner{
+    background: url(../image/banner-01.png);
+    background-size: cover;
+}
+
+.btn{
+    color: #F7CD4A;
+}
+
+.bg-color{
+    background-color: #F7CD4A;
+}
